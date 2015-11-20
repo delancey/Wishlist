@@ -1,0 +1,10 @@
+<%= simple_form_for (@list) do |f| %>
+<%= f.error_notification %>
+<%= f.input :name %>
+<%= f.input :price, hint: "prices should be in US dollar" %>
+<%= f.input :category, label: "Category" %>
+<%= f.input :color %>
+<%= f.input :size, hint: "size small-large, or n/s" %>
+<%= f.input :priority, collection: 1..5, as: :radio_buttons %>
+<%= f.button :submit %>
+<% end %>
